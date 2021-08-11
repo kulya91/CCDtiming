@@ -1,0 +1,3 @@
+*.btree
+ccd_timing_test.sim/
+ccd_timing_test.cache/

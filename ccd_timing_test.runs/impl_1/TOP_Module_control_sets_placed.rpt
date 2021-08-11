@@ -1,0 +1,75 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Tue Aug 10 22:30:03 2021
+| Host         : DESKTOP-EDCLT94 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file TOP_Module_control_sets_placed.rpt
+| Design       : TOP_Module
+| Device       : xc7k325tl
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    20 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               2 |            1 |
+| No           | No                    | Yes                    |              67 |           30 |
+| No           | Yes                   | No                     |               5 |            2 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |             184 |           37 |
+| Yes          | Yes                   | No                     |              42 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------+------------------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+
+|            Clock Signal            |                                          Enable Signal                                         |            Set/Reset Signal           | Slice Load Count | Bel Load Count |
++------------------------------------+------------------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+
+|  uart/tx_next_state_reg[1]_i_1_n_0 |                                                                                                |                                       |                1 |              2 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/rx_data0                                                                     | uart/uart_rx_inst/bit_idle_flag_reg_0 |                1 |              8 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_tx_inst/tx_data_latch[7]_i_1_n_0                                                     | uart/uart_tx_inst/srst                |                2 |              8 |
+|  sys_clk_IBUF_BUFG                 | uart/tx_data_valid                                                                             | uart/uart_tx_inst/srst                |                2 |              8 |
+|  sys_clk_IBUF_BUFG                 | uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/E[0] | uart/uart_tx_inst/srst                |                4 |             18 |
+|  sys_clk_IBUF_BUFG                 | uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/E[0] | uart/uart_tx_inst/srst                |                5 |             24 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/wr_en_r_reg[0]                                                               | uart/uart_rx_inst/bit_idle_flag_reg_0 |                5 |             24 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/wr_en_r_reg[0]                                                               | uart/uart_tx_inst/srst                |                4 |             24 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/idle_cnt[0]_i_1_n_0                                                          | uart/uart_rx_inst/bit_idle_flag_reg_0 |                8 |             32 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/led_reg_reg[31][0]                                                           | uart/uart_rx_inst/bit_idle_flag_reg_0 |                6 |             32 |
+|  sys_clk_IBUF_BUFG                 |                                                                                                | uart/uart_rx_inst/bit_idle_flag_reg_0 |               17 |             36 |
+|  sys_clk_IBUF_BUFG                 |                                                                                                | uart/uart_tx_inst/srst                |               15 |             36 |
+|  sys_clk_IBUF_BUFG                 | uart/uart_rx_inst/E[0]                                                                         | uart/uart_rx_inst/bit_idle_flag_reg_0 |                9 |             48 |
++------------------------------------+------------------------------------------------------------------------------------------------+---------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 2      |                     1 |
+| 8      |                     3 |
+| 16+    |                     9 |
++--------+-----------------------+
+
+
