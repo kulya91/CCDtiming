@@ -60,12 +60,12 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7k325tlffg676-2L
   set_property design_mode GateLvl [current_fileset]
@@ -77,7 +77,8 @@ set rc [catch {
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/TOP_Module.dcp
   read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xci
-  read_ip -quiet f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xci
+  read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xci
+  read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
   read_xdc F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc
   link_design -top TOP_Module -part xc7k325tlffg676-2L
   close_msg_db -file init_design.pb

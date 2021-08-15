@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Aug 10 22:29:27 2021
-# Process ID: 26180
+# Start of session at: Mon Aug 16 00:30:24 2021
+# Process ID: 43648
 # Current directory: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1
 # Command line: vivado.exe -log TOP_Module.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP_Module.tcl -notrace
 # Log file: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module.vdi
@@ -14,33 +14,154 @@ Command: link_design -top TOP_Module -part xc7k325tlffg676-2L
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Project 1-454] Reading design checkpoint 'f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.dcp' for cell 'instance_name'
+INFO: [Project 1-454] Reading design checkpoint 'f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0.dcp' for cell 'ddr/u_mig_7series_0'
 INFO: [Project 1-454] Reading design checkpoint 'f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.dcp' for cell 'uart/fifo_tx_inst'
-INFO: [Netlist 29-17] Analyzing 33 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 410 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2017.4
 INFO: [Device 21-403] Loading part xc7k325tlffg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Opt 31-35] Removing redundant IBUF, instance_name/inst/clkin1_ibufg, from the path connected to top-level port: sys_clk 
-Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'instance_name/clk_in1' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved for implementation tool. [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/.Xil/Vivado-26180-DESKTOP-EDCLT94/dcp3/MMCM.edf:317]
 Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_board.xdc] for cell 'instance_name/inst'
 Finished Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_board.xdc] for cell 'instance_name/inst'
 Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc] for cell 'instance_name/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc:57]
-get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1062.770 ; gain = 378.063
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.781 ; gain = 401.316
 Finished Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc] for cell 'instance_name/inst'
 Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xdc] for cell 'uart/fifo_tx_inst/U0'
 Finished Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xdc] for cell 'uart/fifo_tx_inst/U0'
+Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'ddr/u_mig_7series_0'
+Finished Parsing XDC File [f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc] for cell 'ddr/u_mig_7series_0'
 Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[0]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[1]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[2]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[3]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[4]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[5]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[6]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[7]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[8]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[9]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[10]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[11]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[12]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[13]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[14]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[15]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[16]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[17]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[18]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[19]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[20]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[21]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[22]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[23]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[24]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[25]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[26]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[27]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[28]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[29]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[30]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[31]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[32]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[33]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[34]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[35]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[36]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[37]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[38]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[39]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[40]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[41]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[42]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[43]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[44]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[45]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[46]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[47]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[48]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[49]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[50]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[51]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[52]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[53]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[54]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[55]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[56]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[57]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[58]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[59]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[60]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[61]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[62]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[63]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[64]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[65]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[66]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[67]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[68]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[69]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[70]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[71]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[72]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[73]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[74]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[75]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[76]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[77]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[78]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[79]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[80]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[81]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[82]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[83]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[84]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[85]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[86]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[87]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[88]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[89]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[90]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[91]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[92]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[93]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[94]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[95]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[96]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[97]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[98]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'ddr_ctrtest/app_rd_data[99]'. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:18]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:19]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_2' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:20]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:21]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:22]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:23]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_1' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:24]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:32]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:68]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:69]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:73]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:76]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:77]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc:78]
 Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 154 instances were transformed.
+  IOBUFDS_DIFF_OUT_DCIEN => IOBUFDS_DIFF_OUT_DCIEN (IBUFDS_IBUFDISABLE_INT, IBUFDS_IBUFDISABLE_INT, INV, OBUFTDS_DCIEN, OBUFTDS_DCIEN): 2 instances
+  IOBUF_DCIEN => IOBUF_DCIEN (IBUF_IBUFDISABLE, OBUFT_DCIEN): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS, OBUFDS): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 135 instances
 
-11 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+13 Infos, 100 Warnings, 14 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1062.770 ; gain = 764.383
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1193.055 ; gain = 843.750
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325tl'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325tl'
@@ -51,92 +172,124 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.650 . Memory (MB): peak = 1062.770 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.858 . Memory (MB): peak = 1193.055 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Starting Logic Optimization Task
 
-Phase 1 Retarget
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-318] Generating core instance : dbg_hub
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:xsdbm:3.0", from Vivado IP cache entry "2b9b0710434d13c5".
+INFO: [Netlist 29-17] Analyzing 268 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Chipscope 16-318] Generating core instance : u_ila_0
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "89b01d6904566b12".
+INFO: [Netlist 29-17] Analyzing 426 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Chipscope 16-318] Generating core instance : u_ila_1
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_1_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "38ca4bfb45148470".
+INFO: [Netlist 29-17] Analyzing 530 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Chipscope 16-318] Generating core instance : u_ila_2
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_2_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "c60abf75131b07c3".
+INFO: [Netlist 29-17] Analyzing 549 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Chipscope 16-318] Generating core instance : u_ila_3
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_3_CV.
+INFO: [Chipscope 16-220] Re-using generated and synthesized IP, "xilinx.com:ip:ila:6.2", from Vivado IP cache entry "c60abf75131b07c3".
+INFO: [Netlist 29-17] Analyzing 568 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1251.973 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 11999d7fa
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:03:07 . Memory (MB): peak = 1251.973 ; gain = 58.918
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 189daa0f1
+Phase 2 Retarget | Checksum: 167436618
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1077.547 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:29 ; elapsed = 00:03:10 . Memory (MB): peak = 1361.051 ; gain = 167.996
+INFO: [Opt 31-389] Phase Retarget created 42 cells and removed 128 cells
 
-Phase 2 Constant propagation
+Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 189daa0f1
+Phase 3 Constant propagation | Checksum: 1b685b62a
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1077.547 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:29 ; elapsed = 00:03:11 . Memory (MB): peak = 1361.051 ; gain = 167.996
+INFO: [Opt 31-389] Phase Constant propagation created 3 cells and removed 99 cells
 
-Phase 3 Sweep
-Phase 3 Sweep | Checksum: 182072d8a
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 171d9fe08
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1077.547 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 3 cells
+Time (s): cpu = 00:00:31 ; elapsed = 00:03:12 . Memory (MB): peak = 1361.051 ; gain = 167.996
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 469 cells
 
-Phase 4 BUFG optimization
-INFO: [Opt 31-194] Inserted BUFG sys_clk_IBUF_BUFG_inst to drive 301 load(s) on clock net sys_clk_IBUF_BUFG
-INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
-Phase 4 BUFG optimization | Checksum: 18d858843
+Phase 5 BUFG optimization
+Phase 5 BUFG optimization | Checksum: 171d9fe08
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1077.547 ; gain = 0.000
-INFO: [Opt 31-389] Phase BUFG optimization created 1 cells and removed 0 cells
+Time (s): cpu = 00:00:31 ; elapsed = 00:03:13 . Memory (MB): peak = 1361.051 ; gain = 167.996
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
 
-Phase 5 Shift Register Optimization
-Phase 5 Shift Register Optimization | Checksum: 18d858843
+Phase 6 Shift Register Optimization
+Phase 6 Shift Register Optimization | Checksum: 171d9fe08
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1077.547 ; gain = 0.000
+Time (s): cpu = 00:00:32 ; elapsed = 00:03:13 . Memory (MB): peak = 1361.051 ; gain = 167.996
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1077.547 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 18d858843
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 1361.051 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: f29ec3cc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 1077.547 ; gain = 0.000
+Time (s): cpu = 00:00:33 ; elapsed = 00:03:14 . Memory (MB): peak = 1361.051 ; gain = 167.996
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.000 | TNS=0.000 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.851 | TNS=0.000 |
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 21 BRAM(s) out of a total of 23 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 0 newly gated: 0 Total Ports: 2
-Ending PowerOpt Patch Enables Task | Checksum: 1c87c8fe5
+Number of BRAM Ports augmented: 22 newly gated: 0 Total Ports: 46
+Ending PowerOpt Patch Enables Task | Checksum: 272bb1813
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 1c87c8fe5
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 272bb1813
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1196.711 ; gain = 119.164
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 1706.477 ; gain = 345.426
 INFO: [Common 17-83] Releasing license: Implementation
-34 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+76 Infos, 100 Warnings, 14 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:54 ; elapsed = 00:03:28 . Memory (MB): peak = 1706.477 ; gain = 513.422
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_Module_drc_opted.rpt -pb TOP_Module_drc_opted.pb -rpx TOP_Module_drc_opted.rpx
 Command: report_drc -file TOP_Module_drc_opted.rpt -pb TOP_Module_drc_opted.pb -rpx TOP_Module_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module_drc_opted.rpt.
 report_drc completed successfully
-INFO: [Chipscope 16-241] No debug cores found in the current design.
-Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
-or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+INFO: [Chipscope 16-240] Debug cores have already been implemented
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325tl'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325tl'
@@ -145,17 +298,13 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (uart/rd_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENBWREN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[0] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[1] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[2] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[3] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[4] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[5] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[6] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[7] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 10 Warnings
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (uart/rd_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 6 Warnings
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 
 Starting Placer Task
@@ -164,121 +313,157 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 11b0b6fa6
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 19676bfdc
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 115b34471
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 27519768
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 18e976202
+Phase 1.3 Build Placer Netlist Model | Checksum: 11147d322
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 18e976202
+Phase 1.4 Constrain Clocks/Macros | Checksum: 11147d322
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 18e976202
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 11147d322
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:17 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 2 Global Placement
-Phase 2 Global Placement | Checksum: 153ad12ad
+Phase 2 Global Placement | Checksum: 14d0a7726
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:30 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 153ad12ad
+Phase 3.1 Commit Multi Column Macros | Checksum: 14d0a7726
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:30 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c1478c82
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1a8607220
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1e27ead39
+Phase 3.3 Area Swap Optimization | Checksum: 1eace0ca7
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1e27ead39
+Phase 3.4 Pipeline Register Optimization | Checksum: 11994022d
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
-Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 1181f9a9b
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 11994022d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
-Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 125de0c3d
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 11994022d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
-Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 125de0c3d
+Phase 3.7 Small Shape Detail Placement
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 125de0c3d
+Phase 3.7.1 Place Remaining
+Phase 3.7.1 Place Remaining | Checksum: 1a10cf64f
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:41 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 3.7 Small Shape Detail Placement | Checksum: 1a10cf64f
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:41 . Memory (MB): peak = 1706.477 ; gain = 0.000
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: b7aee05a
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:42 . Memory (MB): peak = 1706.477 ; gain = 0.000
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: b7aee05a
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:42 . Memory (MB): peak = 1706.477 ; gain = 0.000
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: b7aee05a
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: b7aee05a
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:43 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 Post Commit Optimization
-Phase 4.1 Post Commit Optimization | Checksum: 125de0c3d
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: cee3fedc
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: cee3fedc
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1706.477 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.851. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 214255b0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 214255b0
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:48 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 125de0c3d
+Phase 4.2 Post Placement Cleanup | Checksum: 214255b0
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 125de0c3d
+Phase 4.3 Placer Reporting | Checksum: 214255b0
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1706.477 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Phase 4.4 Final Placement Cleanup | Checksum: 1780ad3c8
+Phase 4.4 Final Placement Cleanup | Checksum: cee6cb4c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1780ad3c8
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: cee6cb4c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
-Ending Placer Task | Checksum: 1047504aa
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1706.477 ; gain = 0.000
+Ending Placer Task | Checksum: c73266f4
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:49 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-52 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+99 Infos, 106 Warnings, 14 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1196.711 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:15 ; elapsed = 00:00:52 . Memory (MB): peak = 1706.477 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1196.711 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file TOP_Module_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 1196.711 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file TOP_Module_utilization_placed.rpt -pb TOP_Module_utilization_placed.pb
-report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1196.711 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.351 . Memory (MB): peak = 1706.477 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file TOP_Module_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1196.711 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1706.477 ; gain = 0.000
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325tl'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325tl'
@@ -290,93 +475,112 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 1d40c681 ConstDB: 0 ShapeSum: e7343e29 RouteDB: 0
+Checksum: PlaceDB: 121a6903 ConstDB: 0 ShapeSum: b517fdf1 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: a26ded8e
+Phase 1 Build RT Design | Checksum: 13920af29
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1356.422 ; gain = 159.711
-Post Restoration Checksum: NetGraph: 6e40cada NumContArr: 342d22b4 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:29 . Memory (MB): peak = 1785.262 ; gain = 78.785
+Post Restoration Checksum: NetGraph: fcc0fc56 NumContArr: 3c5fb2d3 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 2.1 Create Timer | Checksum: a26ded8e
+Phase 2.1 Create Timer | Checksum: 13920af29
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.117 ; gain = 202.406
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:30 . Memory (MB): peak = 1785.262 ; gain = 78.785
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: a26ded8e
+Phase 2.2 Fix Topology Constraints | Checksum: 13920af29
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.117 ; gain = 202.406
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:30 . Memory (MB): peak = 1785.262 ; gain = 78.785
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: a26ded8e
+Phase 2.3 Pre Route Cleanup | Checksum: 13920af29
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1399.117 ; gain = 202.406
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:30 . Memory (MB): peak = 1785.262 ; gain = 78.785
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 12fb7e6d0
+Phase 2.4 Update Timing | Checksum: 226456cc7
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:29 . Memory (MB): peak = 1456.137 ; gain = 259.426
-Phase 2 Router Initialization | Checksum: 12fb7e6d0
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:37 . Memory (MB): peak = 1829.574 ; gain = 123.098
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.851  | TNS=0.000  | WHS=-1.797 | THS=-1615.928|
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:29 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Phase 2 Router Initialization | Checksum: 200a26492
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 1838.367 ; gain = 131.891
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 1692632d1
+Phase 3 Initial Routing | Checksum: 1e9ae888c
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:44 . Memory (MB): peak = 1862.520 ; gain = 156.043
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 1507
+ Number of Nodes with overlaps = 88
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-Phase 4.1 Global Iteration 0 | Checksum: 76b8277d
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.851  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
-Phase 4 Rip-up And Reroute | Checksum: 76b8277d
+Phase 4.1 Global Iteration 0 | Checksum: 1dff6925e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1913.793 ; gain = 207.316
+Phase 4 Rip-up And Reroute | Checksum: 1dff6925e
+
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
-Phase 5.1 Delay CleanUp | Checksum: 76b8277d
+Phase 5.1 Delay CleanUp | Checksum: 1dff6925e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 76b8277d
+Phase 5.2 Clock Skew Optimization | Checksum: 1dff6925e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
-Phase 5 Delay and Skew Optimization | Checksum: 76b8277d
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1913.793 ; gain = 207.316
+Phase 5 Delay and Skew Optimization | Checksum: 1dff6925e
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:46 ; elapsed = 00:01:57 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 76b8277d
+Phase 6.1.1 Update Timing | Checksum: 1371223f1
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
-Phase 6.1 Hold Fix Iter | Checksum: 76b8277d
+Time (s): cpu = 00:02:48 ; elapsed = 00:01:58 . Memory (MB): peak = 1913.793 ; gain = 207.316
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.851  | TNS=0.000  | WHS=-1.764 | THS=-10.495|
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
-Phase 6 Post Hold Fix | Checksum: 76b8277d
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 29821f84d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:58 . Memory (MB): peak = 1913.793 ; gain = 207.316
+Phase 6.1 Hold Fix Iter | Checksum: 29821f84d
+
+Time (s): cpu = 00:02:49 ; elapsed = 00:01:58 . Memory (MB): peak = 1913.793 ; gain = 207.316
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.851  | TNS=0.000  | WHS=-1.764 | THS=-10.241|
+
+Phase 6.2 Additional Hold Fix | Checksum: 1d059033b
+
+Time (s): cpu = 00:02:52 ; elapsed = 00:02:00 . Memory (MB): peak = 1913.793 ; gain = 207.316
+Phase 6 Post Hold Fix | Checksum: f5445ad5
+
+Time (s): cpu = 00:02:55 ; elapsed = 00:02:03 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.0192665 %
-  Global Horizontal Routing Utilization  = 0.0198472 %
+  Global Vertical Routing Utilization    = 1.10991 %
+  Global Horizontal Routing Utilization  = 1.50139 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -385,41 +589,59 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 76b8277d
+Phase 7 Route finalize | Checksum: 119306387
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:56 ; elapsed = 00:02:03 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 76b8277d
+Phase 8 Verifying routed nets | Checksum: 119306387
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:56 ; elapsed = 00:02:03 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 102edd58d
+Phase 9 Depositing Routes | Checksum: 98f7e6b7
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:57 ; elapsed = 00:02:04 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Phase 10 Post Router Timing
-Phase 10 Post Router Timing | Checksum: 102edd58d
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: ec699c93
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:05 . Memory (MB): peak = 1913.793 ; gain = 207.316
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.851  | TNS=0.000  | WHS=-1.764 | THS=-10.107|
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: ec699c93
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:05 . Memory (MB): peak = 1913.793 ; gain = 207.316
+WARNING: [Route 35-456] Router was unable to fix hold violation on 1 pins because of tight setup and hold constraints. Such pins are:
+	u_ila_0/inst/ila_core_inst/u_ila_regs/reg_7/I_EN_CTL_EQ1.U_CTL/u_wcnt_lcmp_q_i_1/I1
+
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-459] Router was unable to fix hold violation on 1 pins. This could be due to a combination of congestion, blockages and run-time limitations. Such pins are:
+	u_ila_0/inst/ila_core_inst/u_ila_regs/reg_7/I_EN_CTL_EQ1.U_CTL/u_scnt_cmp_q_i_2/I1
+
+Resolution: You may try high effort hold fixing by turning on param route.enableGlobalHoldIter.
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:40 ; elapsed = 00:00:30 . Memory (MB): peak = 1456.137 ; gain = 259.426
+Time (s): cpu = 00:02:59 ; elapsed = 00:02:05 . Memory (MB): peak = 1913.793 ; gain = 207.316
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-64 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+115 Infos, 109 Warnings, 14 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:31 . Memory (MB): peak = 1456.137 ; gain = 259.426
+route_design: Time (s): cpu = 00:03:04 ; elapsed = 00:02:08 . Memory (MB): peak = 1913.793 ; gain = 207.316
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1456.137 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 1913.793 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1913.793 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file TOP_Module_drc_routed.rpt -pb TOP_Module_drc_routed.pb -rpx TOP_Module_drc_routed.rpx
 Command: report_drc -file TOP_Module_drc_routed.rpt -pb TOP_Module_drc_routed.pb -rpx TOP_Module_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -433,27 +655,33 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file F:/workspace/xilinx/timingtest/ccd_timing_test.runs/impl_1/TOP_Module_methodology_drc_routed.rpt.
 report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1913.793 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_power -file TOP_Module_power_routed.rpt -pb TOP_Module_power_summary_routed.pb -rpx TOP_Module_power_routed.rpx
 Command: report_power -file TOP_Module_power_routed.rpt -pb TOP_Module_power_summary_routed.pb -rpx TOP_Module_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-76 Infos, 12 Warnings, 0 Critical Warnings and 0 Errors encountered.
+127 Infos, 109 Warnings, 14 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1969.000 ; gain = 55.207
 INFO: [runtcl-4] Executing : report_route_status -file TOP_Module_route_status.rpt -pb TOP_Module_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file TOP_Module_timing_summary_routed.rpt -rpx TOP_Module_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 INFO: [runtcl-4] Executing : report_incremental_reuse -file TOP_Module_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
 INFO: [runtcl-4] Executing : report_clock_utilization -file TOP_Module_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1972.012 ; gain = 0.000
 Command: write_bitstream -force TOP_Module.bit
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k325tl'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k325tl'
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer ddr/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[0].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer ddr/u_mig_7series_0/u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/gen_dqs_iobuf_HP.gen_dqs_iobuf[1].gen_dqs_diff.u_iobuf_dqs/IBUFDS_0 has no loads. It is recommended to have an input buffer drive an internal load.
 WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
 
  set_property CFGBVS value1 [current_design]
@@ -464,18 +692,15 @@ WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Nei
 
 Refer to the device configuration user guide for more information.
 WARNING: [DRC PDRC-153] Gated clock check: Net uart/tx_next_state_reg[1]_i_1_n_0 is a gated clock net sourced by a combinational pin uart/tx_next_state_reg[1]_i_1/O, cell uart/tx_next_state_reg[1]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (uart/rd_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENBWREN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[0] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[1] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[2] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[3] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[4] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[5] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[6] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[7] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
-WARNING: [DRC RTSTAT-10] No routable loads: 3 net(s) have no routable loads. The problem bus(es) and/or net(s) are uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, and uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 13 Warnings
+WARNING: [DRC REQP-1709] Clock output buffering: PLLE2_ADV connectivity violation. The signal ddr/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/pll_clk3_out on the ddr/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of ddr/u_mig_7series_0/u_mig_7series_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENARDEN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/tmp_ram_rd_en) which is driven by a register (uart/rd_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/WEBWE[0]) which is driven by a register (uart/wr_en_r_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 42 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, uart/fifo_tx_inst/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, u_ila_1/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13]... and (the first 15 of 40 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 12 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Project 1-821] Please set project.enableDesignId to be 'true'.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -488,7 +713,7 @@ Creating bitstream...
 Writing bitstream ./TOP_Module.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Common 17-83] Releasing license: Implementation
-92 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+143 Infos, 121 Warnings, 15 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 1924.227 ; gain = 464.328
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 10 22:31:05 2021...
+write_bitstream: Time (s): cpu = 00:00:42 ; elapsed = 00:00:35 . Memory (MB): peak = 2523.070 ; gain = 549.500
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 16 00:38:55 2021...

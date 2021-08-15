@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Aug 10 22:28:37 2021
-# Process ID: 16872
+# Start of session at: Mon Aug 16 00:29:20 2021
+# Process ID: 52716
 # Current directory: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1
 # Command line: vivado.exe -log TOP_Module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_Module.tcl
 # Log file: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/TOP_Module.vds
@@ -15,21 +15,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7k325tl'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k325tl'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26452 
+INFO: Helper process launched with PID 52620 
+WARNING: [Synth 8-2507] parameter declaration becomes local in ddr_ctr with formal parameter declaration list [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:164]
+WARNING: [Synth 8-2507] parameter declaration becomes local in ddr_ctr with formal parameter declaration list [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:165]
+WARNING: [Synth 8-2507] parameter declaration becomes local in ddr_ctr with formal parameter declaration list [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:166]
+WARNING: [Synth 8-2507] parameter declaration becomes local in ddr_ctr with formal parameter declaration list [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:171]
+WARNING: [Synth 8-2507] parameter declaration becomes local in ddr_ctr with formal parameter declaration list [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:172]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 408.664 ; gain = 99.938
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 451.535 ; gain = 103.699
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'TOP_Module' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/TOP_Module.v:23]
-INFO: [Synth 8-638] synthesizing module 'MMCM' [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/realtime/MMCM_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'MMCM' (1#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/realtime/MMCM_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'MMCM' [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/MMCM_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'MMCM' (1#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/MMCM_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'uart_test' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:1]
 	Parameter CLK_FRE bound to: 50 - type: integer 
 	Parameter BPS bound to: 115200 - type: integer 
 	Parameter IDLE_CYCLE bound to: 2 - type: integer 
+	Parameter TX_DATA_LENGTH bound to: 128 - type: integer 
 	Parameter TX_IDLE bound to: 0 - type: integer 
 	Parameter TX_READ bound to: 1 - type: integer 
 	Parameter TX_WRITE bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:104]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:150]
 INFO: [Synth 8-638] synthesizing module 'uart_rx' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_rx.v:2]
 	Parameter CLK_FRE bound to: 50 - type: integer 
 	Parameter BAUD_RATE bound to: 115200 - type: integer 
@@ -51,16 +57,54 @@ INFO: [Synth 8-638] synthesizing module 'uart_tx' [F:/workspace/xilinx/timingtes
 	Parameter S_SEND_BYTE bound to: 3 - type: integer 
 	Parameter S_STOP bound to: 4 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'uart_tx' (3#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_tx.v:2]
-INFO: [Synth 8-638] synthesizing module 'fifo_tx' [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/realtime/fifo_tx_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'fifo_tx' (4#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/realtime/fifo_tx_stub.v:6]
-WARNING: [Synth 8-6014] Unused sequential element rx_shift_n_reg was removed.  [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:50]
+INFO: [Synth 8-638] synthesizing module 'fifo_tx' [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/fifo_tx_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'fifo_tx' (4#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/fifo_tx_stub.v:6]
+WARNING: [Synth 8-6014] Unused sequential element rx_shift_n_reg was removed.  [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:47]
 INFO: [Synth 8-256] done synthesizing module 'uart_test' (5#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:1]
 INFO: [Synth 8-638] synthesizing module 'LED_Module' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/LED_Module.v:23]
 INFO: [Synth 8-256] done synthesizing module 'LED_Module' (6#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/LED_Module.v:23]
-WARNING: [Synth 8-3848] Net reset in module/entity TOP_Module does not have driver. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/TOP_Module.v:33]
-INFO: [Synth 8-256] done synthesizing module 'TOP_Module' (7#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/TOP_Module.v:23]
+INFO: [Synth 8-638] synthesizing module 'ddr_test' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_test.v:23]
+	Parameter ADDR_WIDTH bound to: 28 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter PAYLOAD_WIDTH bound to: 16 - type: integer 
+	Parameter BURST_LENGTH bound to: 8 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter APP_MASK_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/mig_7series_0_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'mig_7series_0' (7#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/realtime/mig_7series_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'u_mig_7series_0' of module 'mig_7series_0' requires 39 connections, but only 38 given [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_test.v:84]
+INFO: [Synth 8-638] synthesizing module 'ddr_ctr' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:23]
+	Parameter APP_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter M_S_IDLE bound to: 3'b000 
+	Parameter M_S_RD bound to: 3'b001 
+	Parameter M_S_WR bound to: 3'b010 
+	Parameter CMD_WRITE bound to: 3'b000 
+	Parameter CMD_READ bound to: 3'b001 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:29]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:30]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:32]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:33]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:34]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:36]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:37]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:38]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:40]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:41]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:43]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:44]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:46]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:47]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:48]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:49]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:50]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:168]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:190]
+INFO: [Synth 8-256] done synthesizing module 'ddr_ctr' (8#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ddr_test' (9#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_test.v:23]
+WARNING: [Synth 8-3848] Net reset in module/entity TOP_Module does not have driver. [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/TOP_Module.v:54]
+INFO: [Synth 8-256] done synthesizing module 'TOP_Module' (10#1) [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/TOP_Module.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 461.152 ; gain = 152.426
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 485.813 ; gain = 137.977
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -70,17 +114,19 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 461.152 ; gain = 152.426
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 485.813 ; gain = 137.977
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k325tlffg676-2L
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp2/MMCM_in_context.xdc] for cell 'instance_name'
-Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp2/MMCM_in_context.xdc] for cell 'instance_name'
-Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp3/fifo_tx_in_context.xdc] for cell 'uart/fifo_tx_inst'
-Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp3/fifo_tx_in_context.xdc] for cell 'uart/fifo_tx_inst'
+Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp3/MMCM_in_context.xdc] for cell 'instance_name'
+Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp3/MMCM_in_context.xdc] for cell 'instance_name'
+Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp4/fifo_tx_in_context.xdc] for cell 'uart/fifo_tx_inst'
+Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp4/fifo_tx_in_context.xdc] for cell 'uart/fifo_tx_inst'
+Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc] for cell 'ddr/u_mig_7series_0'
+Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc] for cell 'ddr/u_mig_7series_0'
 Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc]
 Finished Parsing XDC File [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_Module_propImpl.xdc].
@@ -90,26 +136,130 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 856.285 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 892.727 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k325tlffg676-2L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp2/MMCM_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-16872-DESKTOP-EDCLT94/dcp2/MMCM_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clk. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp3/MMCM_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clk. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp3/MMCM_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 2).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 3).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[10]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 6).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[11]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 8).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[12]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 9).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 10).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[13]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 11).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 12).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 13).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 14).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 15).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 16).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[3]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 17).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 18).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[4]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 19).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 20).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[5]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 21).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 22).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[6]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 23).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 24).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[7]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 25).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 26).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[8]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 27).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 28).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_addr[9]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 29).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 30).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 31).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 32).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 33).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 34).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ba[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 35).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 36).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cas_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 37).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 38).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 39).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 40).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ck_p[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 41).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 42).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cke[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 43).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 44).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_cs_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 45).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 46).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 47).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 48).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dm[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 49).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 50).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 51).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 52).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[10]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 53).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 54).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[11]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 55).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 56).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[12]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 57).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 58).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[13]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 59).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 60).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[14]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 61).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 62).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[15]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 63).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 64).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 65).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 66).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[2]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 67).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 68).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[3]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 69).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 70).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[4]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 71).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 72).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[5]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 73).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 74).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[6]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 75).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 76).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[7]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 77).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 78).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[8]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 79).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 80).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dq[9]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 81).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 82).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 83).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 84).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_n[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 85).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 86).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 87).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 88).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_dqs_p[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 89).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 90).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_odt[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 91).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 92).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_ras_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 93).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 94).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_reset_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 95).
+Applied set_property IO_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 96).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for ddr3_we_n. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/.Xil/Vivado-52716-DESKTOP-EDCLT94/dcp5/mig_7series_0_in_context.xdc, line 97).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/state[0]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 28).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/app_en. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 30).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/app_addr[9]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 34).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/app_cmd[1]. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 62).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/read_flag. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 65).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/write_flag. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 66).
+Applied set_property MARK_DEBUG = true for ddr/ddr_ctrer/ui_clk. (constraint file  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/constrs_1/new/ccd_timing.xdc, line 71).
+Applied set_property DONT_TOUCH = true for ddr/u_mig_7series_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for instance_name. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for uart/fifo_tx_inst. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
 INFO: [Synth 8-5546] ROM "bit_cnt" won't be mapped to RAM because it is too sparse
@@ -134,8 +284,11 @@ INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too s
 INFO: [Synth 8-5544] ROM "tx_next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rd_en_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "rd_en_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "led0_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "led1_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-6014] Unused sequential element fifo_write_shift_reg was removed.  [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:94]
+INFO: [Synth 8-5544] ROM "led0_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "led1_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "app_addr_r" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -155,9 +308,10 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
                   S_STOP |                               11 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
-WARNING: [Synth 8-327] inferring latch for variable 'tx_next_state_reg' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:107]
+WARNING: [Synth 8-327] inferring latch for variable 'uart_reg' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:70]
+WARNING: [Synth 8-327] inferring latch for variable 'tx_next_state_reg' [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:153]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -173,29 +327,34 @@ Detailed RTL Component Info :
 	   2 Input     16 Bit       Adders := 2     
 	   2 Input      3 Bit       Adders := 2     
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               48 Bit    Registers := 1     
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 4     
 	               32 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
 	               16 Bit    Registers := 2     
 	               12 Bit    Registers := 1     
-	                8 Bit    Registers := 4     
+	                8 Bit    Registers := 6     
 	                4 Bit    Registers := 1     
-	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 15    
+	                3 Bit    Registers := 4     
+	                1 Bit    Registers := 25    
 +---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 2     
+	   4 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 7     
+	   2 Input      3 Bit        Muxes := 10    
 	   5 Input      3 Bit        Muxes := 2     
 	  11 Input      3 Bit        Muxes := 1     
-	   4 Input      3 Bit        Muxes := 2     
-	   2 Input      2 Bit        Muxes := 6     
+	   4 Input      3 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 7     
 	   9 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 19    
+	   2 Input      1 Bit        Muxes := 29    
 	   3 Input      1 Bit        Muxes := 2     
-	   4 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -244,24 +403,43 @@ Detailed RTL Component Info :
 Module uart_test 
 Detailed RTL Component Info : 
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               48 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
+	              256 Bit    Registers := 1     
+	              128 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
 +---Muxes : 
+	   2 Input    256 Bit        Muxes := 1     
+	   2 Input    128 Bit        Muxes := 1     
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 9     
 	   3 Input      1 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 1     
 Module LED_Module 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 2     
+Module ddr_ctr 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 1     
+	   4 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -285,34 +463,20 @@ INFO: [Synth 8-5546] ROM "uart/uart_rx_inst/bit_cnt" won't be mapped to RAM beca
 INFO: [Synth 8-5546] ROM "uart/uart_tx_inst/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/uart_tx_inst/next_state" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "uart/uart_tx_inst/bit_cnt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "led/led0_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "led/led1_r" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-6014] Unused sequential element uart/uart_rx_inst/idle_cnt_reg was removed.  [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_rx.v:191]
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[48]' (FDCE) to 'uart/din_r_reg[49]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[49]' (FDCE) to 'uart/din_r_reg[50]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[50]' (FDCE) to 'uart/din_r_reg[51]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[51]' (FDCE) to 'uart/din_r_reg[52]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[52]' (FDCE) to 'uart/din_r_reg[53]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[53]' (FDCE) to 'uart/din_r_reg[54]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[54]' (FDCE) to 'uart/din_r_reg[55]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[55]' (FDCE) to 'uart/din_r_reg[56]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[56]' (FDCE) to 'uart/din_r_reg[57]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[57]' (FDCE) to 'uart/din_r_reg[58]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[58]' (FDCE) to 'uart/din_r_reg[59]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[59]' (FDCE) to 'uart/din_r_reg[60]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[60]' (FDCE) to 'uart/din_r_reg[61]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[61]' (FDCE) to 'uart/din_r_reg[62]'
-INFO: [Synth 8-3886] merging instance 'uart/din_r_reg[62]' (FDCE) to 'uart/din_r_reg[63]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart/din_r_reg[63] )
+WARNING: [Synth 8-6014] Unused sequential element uart/fifo_write_shift_reg was removed.  [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v:94]
 INFO: [Synth 8-3886] merging instance 'uart/tx_next_state_reg[2]' (LD) to 'uart/tx_next_state_reg[3]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\uart/tx_next_state_reg[3] )
 WARNING: [Synth 8-3332] Sequential element (uart/tx_next_state_reg[3]) is unused and will be removed from module TOP_Module.
 WARNING: [Synth 8-3332] Sequential element (uart/uart_rx_inst/bit_idle_flag_n_reg) is unused and will be removed from module TOP_Module.
 WARNING: [Synth 8-3332] Sequential element (uart/tx_state_reg[3]) is unused and will be removed from module TOP_Module.
 WARNING: [Synth 8-3332] Sequential element (uart/tx_state_reg[2]) is unused and will be removed from module TOP_Module.
-WARNING: [Synth 8-3332] Sequential element (uart/din_r_reg[63]) is unused and will be removed from module TOP_Module.
+WARNING: [Synth 8-3332] Sequential element (ddr_addr_reg[31]) is unused and will be removed from module ddr_ctr.
+WARNING: [Synth 8-3332] Sequential element (ddr_addr_reg[30]) is unused and will be removed from module ddr_ctr.
+WARNING: [Synth 8-3332] Sequential element (ddr_addr_reg[29]) is unused and will be removed from module ddr_ctr.
+WARNING: [Synth 8-3332] Sequential element (ddr_addr_reg[28]) is unused and will be removed from module ddr_ctr.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,17 +487,19 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/ddr_clk' to pin 'instance_name/bbstub_ddr_clk/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/uart_clk' to pin 'instance_name/bbstub_uart_clk/O'
-INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_200m' to pin 'instance_name/bbstub_clk_200m/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_400m' to pin 'instance_name/bbstub_clk_400m/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'instance_name/clk_50m' to pin 'instance_name/bbstub_clk_50m/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'ddr/u_mig_7series_0/ui_clk' to pin 'ddr/u_mig_7series_0/bbstub_ui_clk/O'
+INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 856.285 ; gain = 547.559
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 892.727 ; gain = 544.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 860.441 ; gain = 551.715
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -345,7 +511,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -369,8 +535,9 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 CRITICAL WARNING: [Synth 8-4442] BlackBox module instance_name has unconnected pin reset
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v:91]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -383,7 +550,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -395,25 +562,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -424,59 +591,66 @@ Report BlackBoxes:
 |      |BlackBox name |Instances |
 +------+--------------+----------+
 |1     |MMCM          |         1|
-|2     |fifo_tx       |         1|
+|2     |mig_7series_0 |         1|
+|3     |fifo_tx       |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
-+------+--------+------+
-|      |Cell    |Count |
-+------+--------+------+
-|1     |MMCM    |     1|
-|2     |fifo_tx |     1|
-|3     |CARRY4  |    16|
-|4     |LUT2    |    25|
-|5     |LUT3    |    28|
-|6     |LUT4    |    17|
-|7     |LUT5    |    33|
-|8     |LUT6    |    63|
-|9     |FDCE    |   250|
-|10    |FDPE    |     1|
-|11    |LD      |     2|
-|12    |IBUF    |     2|
-|13    |OBUF    |     3|
-+------+--------+------+
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |MMCM          |     1|
+|2     |fifo_tx       |     1|
+|3     |mig_7series_0 |     1|
+|4     |BUFG          |     1|
+|5     |CARRY4        |    62|
+|6     |LUT1          |     6|
+|7     |LUT2          |   440|
+|8     |LUT3          |   347|
+|9     |LUT4          |    21|
+|10    |LUT5          |    37|
+|11    |LUT6          |    70|
+|12    |FDCE          |   978|
+|13    |FDPE          |    16|
+|14    |LD            |   258|
+|15    |IBUF          |     2|
+|16    |OBUF          |     3|
++------+--------------+------+
 
 Report Instance Areas: 
 +------+-----------------+-----------+------+
 |      |Instance         |Module     |Cells |
 +------+-----------------+-----------+------+
-|1     |top              |           |   455|
-|2     |  led            |LED_Module |    43|
-|3     |  uart           |uart_test  |   404|
-|4     |    uart_rx_inst |uart_rx    |   200|
-|5     |    uart_tx_inst |uart_tx    |    74|
+|1     |top              |           |  2435|
+|2     |  ddr            |ddr_test   |  1061|
+|3     |    ddr_ctrer    |ddr_ctr    |   753|
+|4     |  led            |LED_Module |    32|
+|5     |  uart           |uart_test  |  1332|
+|6     |    uart_rx_inst |uart_rx    |   465|
+|7     |    uart_tx_inst |uart_tx    |    74|
 +------+-----------------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 862.656 ; gain = 158.797
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 862.656 ; gain = 553.930
+Synthesis finished with 0 errors, 1 critical warnings and 18 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 909.781 ; gain = 155.031
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 909.781 ; gain = 561.945
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 322 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
-  LD => LDCE: 2 instances
+  A total of 258 instances were transformed.
+  LD => LDCE: 258 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 13 Warnings, 1 Critical Warnings and 0 Errors encountered.
+92 Infos, 26 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 868.609 ; gain = 571.352
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 910.793 ; gain = 562.957
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/TOP_Module.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TOP_Module_utilization_synth.rpt -pb TOP_Module_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 868.609 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 10 22:29:20 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 910.793 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 16 00:30:11 2021...

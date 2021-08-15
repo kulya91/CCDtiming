@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Wed Jul 28 17:15:08 2021
+-- Date        : Sat Aug 14 22:44:13 2021
 -- Host        : DESKTOP-EDCLT94 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
+--               F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
 -- Design      : MMCM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,28 +16,29 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity MMCM_MMCM_clk_wiz is
   port (
-    uart_clk : out STD_LOGIC;
-    ddr_clk : out STD_LOGIC;
+    clk_50m : out STD_LOGIC;
+    clk_200m : out STD_LOGIC;
+    clk_400m : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
-    clk_in1 : in STD_LOGIC
+    sys_clk : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of MMCM_MMCM_clk_wiz : entity is "MMCM_clk_wiz";
 end MMCM_MMCM_clk_wiz;
 
 architecture STRUCTURE of MMCM_MMCM_clk_wiz is
-  signal clk_in1_MMCM : STD_LOGIC;
+  signal clk_200m_MMCM : STD_LOGIC;
+  signal clk_400m_MMCM : STD_LOGIC;
+  signal clk_50m_MMCM : STD_LOGIC;
   signal clkfbout_MMCM : STD_LOGIC;
   signal clkfbout_buf_MMCM : STD_LOGIC;
-  signal ddr_clk_MMCM : STD_LOGIC;
-  signal uart_clk_MMCM : STD_LOGIC;
+  signal sys_clk_MMCM : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
@@ -58,6 +59,7 @@ architecture STRUCTURE of MMCM_MMCM_clk_wiz is
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -70,36 +72,41 @@ clkin1_ibufg: unisim.vcomponents.IBUF
       IOSTANDARD => "DEFAULT"
     )
         port map (
-      I => clk_in1,
-      O => clk_in1_MMCM
+      I => sys_clk,
+      O => sys_clk_MMCM
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => uart_clk_MMCM,
-      O => uart_clk
+      I => clk_50m_MMCM,
+      O => clk_50m
     );
 clkout2_buf: unisim.vcomponents.BUFG
      port map (
-      I => ddr_clk_MMCM,
-      O => ddr_clk
+      I => clk_200m_MMCM,
+      O => clk_200m
+    );
+clkout3_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_400m_MMCM,
+      O => clk_400m
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 8.000000,
+      CLKFBOUT_MULT_F => 16.000000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
-      CLKIN1_PERIOD => 10.000000,
+      CLKIN1_PERIOD => 20.000000,
       CLKIN2_PERIOD => 0.000000,
       CLKOUT0_DIVIDE_F => 16.000000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 2,
+      CLKOUT1_DIVIDE => 4,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 1,
+      CLKOUT2_DIVIDE => 2,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => false,
@@ -139,15 +146,15 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKFBOUT => clkfbout_MMCM,
       CLKFBOUTB => NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED,
       CLKFBSTOPPED => NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED,
-      CLKIN1 => clk_in1_MMCM,
+      CLKIN1 => sys_clk_MMCM,
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => uart_clk_MMCM,
+      CLKOUT0 => clk_50m_MMCM,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => ddr_clk_MMCM,
+      CLKOUT1 => clk_200m_MMCM,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED,
+      CLKOUT2 => clk_400m_MMCM,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
@@ -176,11 +183,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity MMCM is
   port (
-    uart_clk : out STD_LOGIC;
-    ddr_clk : out STD_LOGIC;
+    clk_50m : out STD_LOGIC;
+    clk_200m : out STD_LOGIC;
+    clk_400m : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
-    clk_in1 : in STD_LOGIC
+    sys_clk : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of MMCM : entity is true;
@@ -190,10 +198,11 @@ architecture STRUCTURE of MMCM is
 begin
 inst: entity work.MMCM_MMCM_clk_wiz
      port map (
-      clk_in1 => clk_in1,
-      ddr_clk => ddr_clk,
+      clk_200m => clk_200m,
+      clk_400m => clk_400m,
+      clk_50m => clk_50m,
       locked => locked,
       reset => reset,
-      uart_clk => uart_clk
+      sys_clk => sys_clk
     );
 end STRUCTURE;

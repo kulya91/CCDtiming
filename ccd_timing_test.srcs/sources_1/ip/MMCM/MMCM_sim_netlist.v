@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Wed Jul 28 17:15:08 2021
+// Date        : Sat Aug 14 22:44:13 2021
 // Host        : DESKTOP-EDCLT94 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
+//               F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
 // Design      : MMCM
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,60 +14,67 @@
 
 (* NotValidForBitStream *)
 module MMCM
-   (uart_clk,
-    ddr_clk,
+   (clk_50m,
+    clk_200m,
+    clk_400m,
     reset,
     locked,
-    clk_in1);
-  output uart_clk;
-  output ddr_clk;
+    sys_clk);
+  output clk_50m;
+  output clk_200m;
+  output clk_400m;
   input reset;
   output locked;
-  input clk_in1;
+  input sys_clk;
 
-  (* IBUF_LOW_PWR *) wire clk_in1;
-  wire ddr_clk;
+  wire clk_200m;
+  wire clk_400m;
+  wire clk_50m;
   wire locked;
   wire reset;
-  wire uart_clk;
+  (* IBUF_LOW_PWR *) wire sys_clk;
 
   MMCM_MMCM_clk_wiz inst
-       (.clk_in1(clk_in1),
-        .ddr_clk(ddr_clk),
+       (.clk_200m(clk_200m),
+        .clk_400m(clk_400m),
+        .clk_50m(clk_50m),
         .locked(locked),
         .reset(reset),
-        .uart_clk(uart_clk));
+        .sys_clk(sys_clk));
 endmodule
 
 (* ORIG_REF_NAME = "MMCM_clk_wiz" *) 
 module MMCM_MMCM_clk_wiz
-   (uart_clk,
-    ddr_clk,
+   (clk_50m,
+    clk_200m,
+    clk_400m,
     reset,
     locked,
-    clk_in1);
-  output uart_clk;
-  output ddr_clk;
+    sys_clk);
+  output clk_50m;
+  output clk_200m;
+  output clk_400m;
   input reset;
   output locked;
-  input clk_in1;
+  input sys_clk;
 
-  wire clk_in1;
-  wire clk_in1_MMCM;
+  wire clk_200m;
+  wire clk_200m_MMCM;
+  wire clk_400m;
+  wire clk_400m_MMCM;
+  wire clk_50m;
+  wire clk_50m_MMCM;
   wire clkfbout_MMCM;
   wire clkfbout_buf_MMCM;
-  wire ddr_clk;
-  wire ddr_clk_MMCM;
   wire locked;
   wire reset;
-  wire uart_clk;
-  wire uart_clk_MMCM;
+  wire sys_clk;
+  wire sys_clk_MMCM;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
@@ -89,33 +96,37 @@ module MMCM_MMCM_clk_wiz
   IBUF #(
     .IOSTANDARD("DEFAULT")) 
     clkin1_ibufg
-       (.I(clk_in1),
-        .O(clk_in1_MMCM));
+       (.I(sys_clk),
+        .O(sys_clk_MMCM));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(uart_clk_MMCM),
-        .O(uart_clk));
+       (.I(clk_50m_MMCM),
+        .O(clk_50m));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
-       (.I(ddr_clk_MMCM),
-        .O(ddr_clk));
+       (.I(clk_200m_MMCM),
+        .O(clk_200m));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout3_buf
+       (.I(clk_400m_MMCM),
+        .O(clk_400m));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(8.000000),
+    .CLKFBOUT_MULT_F(16.000000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
-    .CLKIN1_PERIOD(10.000000),
+    .CLKIN1_PERIOD(20.000000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE_F(16.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(2),
+    .CLKOUT1_DIVIDE(4),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(1),
+    .CLKOUT2_DIVIDE(2),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
@@ -154,15 +165,15 @@ module MMCM_MMCM_clk_wiz
         .CLKFBOUT(clkfbout_MMCM),
         .CLKFBOUTB(NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED),
         .CLKFBSTOPPED(NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED),
-        .CLKIN1(clk_in1_MMCM),
+        .CLKIN1(sys_clk_MMCM),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(uart_clk_MMCM),
+        .CLKOUT0(clk_50m_MMCM),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(ddr_clk_MMCM),
+        .CLKOUT1(clk_200m_MMCM),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED),
+        .CLKOUT2(clk_400m_MMCM),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
         .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),

@@ -16,8 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param tcl.collectionResultDisplayLimit 0
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7k325tlffg676-2L
 
 set_param project.singleFileAddWarning.threshold 0
@@ -33,6 +33,8 @@ set_property ip_output_repo f:/workspace/xilinx/timingtest/ccd_timing_test.cache
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/LED_Module.v
+  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_ctr.v
+  F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/new/ddr_test.v
   F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_rx.v
   F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_test.v
   F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/uart/uart_tx.v
@@ -43,9 +45,13 @@ set_property used_in_implementation false [get_files -all f:/workspace/xilinx/ti
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc]
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_ooc.xdc]
 
-read_ip -quiet f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xci
+read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xci
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx.xdc]
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/fifo_tx/fifo_tx_ooc.xdc]
+
+read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
+set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
+set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

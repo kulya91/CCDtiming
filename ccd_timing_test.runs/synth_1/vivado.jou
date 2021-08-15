@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Tue Aug 10 22:28:37 2021
-# Process ID: 16872
+# Start of session at: Mon Aug 16 00:29:20 2021
+# Process ID: 52716
 # Current directory: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1
 # Command line: vivado.exe -log TOP_Module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP_Module.tcl
 # Log file: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1/TOP_Module.vds

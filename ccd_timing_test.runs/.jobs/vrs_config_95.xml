@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="MMCM_synth_1" LaunchDir="F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fifo_tx_synth_1" LaunchDir="F:/workspace/xilinx/timingtest/ccd_timing_test.runs/fifo_tx_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="mig_7series_0_synth_1" LaunchDir="F:/workspace/xilinx/timingtest/ccd_timing_test.runs/mig_7series_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="F:/workspace/xilinx/timingtest/ccd_timing_test.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="MMCM_synth_1"/>
+		<Parent Id="fifo_tx_synth_1"/>
+		<Parent Id="mig_7series_0_synth_1"/>
+	</Run>
+</Runs>
+

@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Jul 28 17:14:28 2021
-# Process ID: 25760
+# Start of session at: Sat Aug 14 22:43:33 2021
+# Process ID: 28324
 # Current directory: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1
 # Command line: vivado.exe -log MMCM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MMCM.tcl
 # Log file: F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM.vds

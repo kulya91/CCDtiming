@@ -55,13 +55,14 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// uart_clk____50.000______0.000______50.0______167.017____114.212
-// _ddr_clk___400.000______0.000______50.0______111.164____114.212
+// _clk_50m____50.000______0.000______50.0______222.587____144.334
+// clk_200m___200.000______0.000______50.0______161.087____144.334
+// clk_400m___400.000______0.000______50.0______143.285____144.334
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary______________50____________0.010
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
@@ -72,11 +73,12 @@
   MMCM instance_name
    (
     // Clock out ports
-    .uart_clk(uart_clk),     // output uart_clk
-    .ddr_clk(ddr_clk),     // output ddr_clk
+    .clk_50m(clk_50m),     // output clk_50m
+    .clk_200m(clk_200m),     // output clk_200m
+    .clk_400m(clk_400m),     // output clk_400m
     // Status and control signals
     .reset(reset), // input reset
     .locked(locked),       // output locked
    // Clock in ports
-    .clk_in1(clk_in1));      // input clk_in1
+    .sys_clk(sys_clk));      // input sys_clk
 // INST_TAG_END ------ End INSTANTIATION Template ---------

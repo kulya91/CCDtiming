@@ -56,13 +56,14 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// uart_clk____50.000______0.000______50.0______167.017____114.212
-// _ddr_clk___400.000______0.000______50.0______111.164____114.212
+// _clk_50m____50.000______0.000______50.0______222.587____144.334
+// clk_200m___200.000______0.000______50.0______161.087____144.334
+// clk_400m___400.000______0.000______50.0______143.285____144.334
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
 //----------------------------------------------------------------------------
-// __primary_________100.000____________0.010
+// __primary______________50____________0.010
 
 `timescale 1ps/1ps
 
@@ -70,20 +71,21 @@ module MMCM_clk_wiz
 
  (// Clock in ports
   // Clock out ports
-  output        uart_clk,
-  output        ddr_clk,
+  output        clk_50m,
+  output        clk_200m,
+  output        clk_400m,
   // Status and control signals
   input         reset,
   output        locked,
-  input         clk_in1
+  input         sys_clk
  );
   // Input buffering
   //------------------------------------
-wire clk_in1_MMCM;
+wire sys_clk_MMCM;
 wire clk_in2_MMCM;
   IBUF clkin1_ibufg
-   (.O (clk_in1_MMCM),
-    .I (clk_in1));
+   (.O (sys_clk_MMCM),
+    .I (sys_clk));
 
 
 
@@ -95,9 +97,9 @@ wire clk_in2_MMCM;
   //    * Unused inputs are tied off
   //    * Unused outputs are labeled unused
 
-  wire        uart_clk_MMCM;
-  wire        ddr_clk_MMCM;
-  wire        clk_out3_MMCM;
+  wire        clk_50m_MMCM;
+  wire        clk_200m_MMCM;
+  wire        clk_400m_MMCM;
   wire        clk_out4_MMCM;
   wire        clk_out5_MMCM;
   wire        clk_out6_MMCM;
@@ -112,7 +114,6 @@ wire clk_in2_MMCM;
   wire        clkfboutb_unused;
     wire clkout0b_unused;
    wire clkout1b_unused;
-   wire clkout2_unused;
    wire clkout2b_unused;
    wire clkout3_unused;
    wire clkout3b_unused;
@@ -129,28 +130,32 @@ wire clk_in2_MMCM;
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (8.000),
+    .CLKFBOUT_MULT_F      (16.000),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
     .CLKOUT0_DIVIDE_F     (16.000),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (2),
+    .CLKOUT1_DIVIDE       (4),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
-    .CLKIN1_PERIOD        (10.000))
+    .CLKOUT2_DIVIDE       (2),
+    .CLKOUT2_PHASE        (0.000),
+    .CLKOUT2_DUTY_CYCLE   (0.500),
+    .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKIN1_PERIOD        (20.000))
   mmcm_adv_inst
     // Output clocks
    (
     .CLKFBOUT            (clkfbout_MMCM),
     .CLKFBOUTB           (clkfboutb_unused),
-    .CLKOUT0             (uart_clk_MMCM),
+    .CLKOUT0             (clk_50m_MMCM),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (ddr_clk_MMCM),
+    .CLKOUT1             (clk_200m_MMCM),
     .CLKOUT1B            (clkout1b_unused),
-    .CLKOUT2             (clkout2_unused),
+    .CLKOUT2             (clk_400m_MMCM),
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (clkout3_unused),
     .CLKOUT3B            (clkout3b_unused),
@@ -159,7 +164,7 @@ wire clk_in2_MMCM;
     .CLKOUT6             (clkout6_unused),
      // Input clock control
     .CLKFBIN             (clkfbout_buf_MMCM),
-    .CLKIN1              (clk_in1_MMCM),
+    .CLKIN1              (sys_clk_MMCM),
     .CLKIN2              (1'b0),
      // Tied to always select the primary input clock
     .CLKINSEL            (1'b1),
@@ -200,13 +205,17 @@ wire clk_in2_MMCM;
 
 
   BUFG clkout1_buf
-   (.O   (uart_clk),
-    .I   (uart_clk_MMCM));
+   (.O   (clk_50m),
+    .I   (clk_50m_MMCM));
 
 
   BUFG clkout2_buf
-   (.O   (ddr_clk),
-    .I   (ddr_clk_MMCM));
+   (.O   (clk_200m),
+    .I   (clk_200m_MMCM));
+
+  BUFG clkout3_buf
+   (.O   (clk_400m),
+    .I   (clk_400m_MMCM));
 
 
 

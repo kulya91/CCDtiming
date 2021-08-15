@@ -3,162 +3,157 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="uart_tb_behav.wdb" id="1">
+      <db_ref path="ddr_write_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="ddr_write_tb" />
             <top_module name="glbl" />
-            <top_module name="uart_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="544440500000fs"></ZoomStartTime>
-      <ZoomEndTime time="545457500001fs"></ZoomEndTime>
-      <Cursor1Time time="544610000000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="129834397fs"></ZoomEndTime>
+      <Cursor1Time time="210000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="158"></NameColumnWidth>
-      <ValueColumnWidth column_width="99"></ValueColumnWidth>
+      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
-   <wvobject fp_name="/uart_tb/uart/rst_n" type="logic">
+   <WVObjectSize size="34" />
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/ui_clk" type="logic">
+      <obj_property name="ElementShortName">ui_clk</obj_property>
+      <obj_property name="ObjectShortName">ui_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/rst_n" type="logic">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/uart_rx" type="logic">
-      <obj_property name="ElementShortName">uart_rx</obj_property>
-      <obj_property name="ObjectShortName">uart_rx</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_addr" type="array">
+      <obj_property name="ElementShortName">app_addr[27:0]</obj_property>
+      <obj_property name="ObjectShortName">app_addr[27:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/uart_tx" type="logic">
-      <obj_property name="ElementShortName">uart_tx</obj_property>
-      <obj_property name="ObjectShortName">uart_tx</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_cmd" type="array">
+      <obj_property name="ElementShortName">app_cmd[2:0]</obj_property>
+      <obj_property name="ObjectShortName">app_cmd[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/uart_reg" type="array">
-      <obj_property name="ElementShortName">uart_reg[47:0]</obj_property>
-      <obj_property name="ObjectShortName">uart_reg[47:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_en" type="logic">
+      <obj_property name="ElementShortName">app_en</obj_property>
+      <obj_property name="ObjectShortName">app_en</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/uart_ready" type="logic">
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_wdf_data" type="array">
+      <obj_property name="ElementShortName">app_wdf_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_data[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_wdf_end" type="logic">
+      <obj_property name="ElementShortName">app_wdf_end</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_wdf_wren" type="logic">
+      <obj_property name="ElementShortName">app_wdf_wren</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_wren</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_rd_data" type="array">
+      <obj_property name="ElementShortName">app_rd_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">app_rd_data[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_rd_data_valid" type="logic">
+      <obj_property name="ElementShortName">app_rd_data_valid</obj_property>
+      <obj_property name="ObjectShortName">app_rd_data_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_rdy" type="logic">
+      <obj_property name="ElementShortName">app_rdy</obj_property>
+      <obj_property name="ObjectShortName">app_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/app_wdf_rdy" type="logic">
+      <obj_property name="ElementShortName">app_wdf_rdy</obj_property>
+      <obj_property name="ObjectShortName">app_wdf_rdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_clk" type="logic">
+      <obj_property name="ElementShortName">uart_clk</obj_property>
+      <obj_property name="ObjectShortName">uart_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_reg" type="array">
+      <obj_property name="ElementShortName">uart_reg[255:0]</obj_property>
+      <obj_property name="ObjectShortName">uart_reg[255:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/ddr_rd_data" type="array">
+      <obj_property name="ElementShortName">ddr_rd_data[127:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_rd_data[127:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_ready" type="logic">
       <obj_property name="ElementShortName">uart_ready</obj_property>
       <obj_property name="ObjectShortName">uart_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_data_valid" type="logic">
-      <obj_property name="ElementShortName">rx_data_valid</obj_property>
-      <obj_property name="ObjectShortName">rx_data_valid</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/ddr_read_ready" type="logic">
+      <obj_property name="ElementShortName">ddr_read_ready</obj_property>
+      <obj_property name="ObjectShortName">ddr_read_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_data_ready" type="logic">
-      <obj_property name="ElementShortName">rx_data_ready</obj_property>
-      <obj_property name="ObjectShortName">rx_data_ready</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_frame_idle" type="logic">
-      <obj_property name="ElementShortName">rx_frame_idle</obj_property>
-      <obj_property name="ObjectShortName">rx_frame_idle</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/state_next" type="array">
+      <obj_property name="ElementShortName">state_next[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state_next[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_bit_idle" type="logic">
-      <obj_property name="ElementShortName">rx_bit_idle</obj_property>
-      <obj_property name="ObjectShortName">rx_bit_idle</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_ready_d0" type="logic">
+      <obj_property name="ElementShortName">uart_ready_d0</obj_property>
+      <obj_property name="ObjectShortName">uart_ready_d0</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_frame_bit_num" type="array">
-      <obj_property name="ElementShortName">rx_frame_bit_num[11:0]</obj_property>
-      <obj_property name="ObjectShortName">rx_frame_bit_num[11:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_ready_d1" type="logic">
+      <obj_property name="ElementShortName">uart_ready_d1</obj_property>
+      <obj_property name="ObjectShortName">uart_ready_d1</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_data" type="array">
-      <obj_property name="ElementShortName">rx_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rx_data[7:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uart_ready_flag" type="logic">
+      <obj_property name="ElementShortName">uart_ready_flag</obj_property>
+      <obj_property name="ObjectShortName">uart_ready_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rx_shift_n" type="array">
-      <obj_property name="ElementShortName">rx_shift_n[11:0]</obj_property>
-      <obj_property name="ObjectShortName">rx_shift_n[11:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/ddrclk_read_ready" type="logic">
+      <obj_property name="ElementShortName">ddrclk_read_ready</obj_property>
+      <obj_property name="ObjectShortName">ddrclk_read_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/din" type="array">
-      <obj_property name="ElementShortName">din[63:0]</obj_property>
-      <obj_property name="ObjectShortName">din[63:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/read_ready_flag" type="logic">
+      <obj_property name="ElementShortName">read_ready_flag</obj_property>
+      <obj_property name="ObjectShortName">read_ready_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/sys_clk" type="logic">
-      <obj_property name="ElementShortName">sys_clk</obj_property>
-      <obj_property name="ObjectShortName">sys_clk</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uartclk_read_ready" type="logic">
+      <obj_property name="ElementShortName">uartclk_read_ready</obj_property>
+      <obj_property name="ObjectShortName">uartclk_read_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/wr_en" type="logic">
-      <obj_property name="ElementShortName">wr_en</obj_property>
-      <obj_property name="ObjectShortName">wr_en</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/uartclk_read_ready_d" type="logic">
+      <obj_property name="ElementShortName">uartclk_read_ready_d</obj_property>
+      <obj_property name="ObjectShortName">uartclk_read_ready_d</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/wr_ack" type="logic">
-      <obj_property name="ElementShortName">wr_ack</obj_property>
-      <obj_property name="ObjectShortName">wr_ack</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/read_flag" type="logic">
+      <obj_property name="ElementShortName">read_flag</obj_property>
+      <obj_property name="ObjectShortName">read_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/tx_data_valid" type="logic">
-      <obj_property name="ElementShortName">tx_data_valid</obj_property>
-      <obj_property name="ObjectShortName">tx_data_valid</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/write_flag" type="logic">
+      <obj_property name="ElementShortName">write_flag</obj_property>
+      <obj_property name="ObjectShortName">write_flag</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/tx_data_ready" type="logic">
-      <obj_property name="ElementShortName">tx_data_ready</obj_property>
-      <obj_property name="ObjectShortName">tx_data_ready</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/ddr_addr" type="array">
+      <obj_property name="ElementShortName">ddr_addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ddr_addr[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rd_en" type="logic">
-      <obj_property name="ElementShortName">rd_en</obj_property>
-      <obj_property name="ObjectShortName">rd_en</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/M_S_IDLE" type="array">
+      <obj_property name="ElementShortName">M_S_IDLE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_S_IDLE[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/valid" type="logic">
-      <obj_property name="ElementShortName">valid</obj_property>
-      <obj_property name="ObjectShortName">valid</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/M_S_RD" type="array">
+      <obj_property name="ElementShortName">M_S_RD[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_S_RD[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/tx_data" type="array">
-      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/M_S_WR" type="array">
+      <obj_property name="ElementShortName">M_S_WR[2:0]</obj_property>
+      <obj_property name="ObjectShortName">M_S_WR[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/dout" type="array">
-      <obj_property name="ElementShortName">dout[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dout[7:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/CMD_WRITE" type="array">
+      <obj_property name="ElementShortName">CMD_WRITE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">CMD_WRITE[2:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/uart_tb/uart/tx_state" type="array">
-      <obj_property name="ElementShortName">tx_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tx_state[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/tx_next_state" type="array">
-      <obj_property name="ElementShortName">tx_next_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tx_next_state[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/full" type="logic">
-      <obj_property name="ElementShortName">full</obj_property>
-      <obj_property name="ObjectShortName">full</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/empty" type="logic">
-      <obj_property name="ElementShortName">empty</obj_property>
-      <obj_property name="ObjectShortName">empty</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/din_r" type="array">
-      <obj_property name="ElementShortName">din_r[63:0]</obj_property>
-      <obj_property name="ObjectShortName">din_r[63:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/wr_en_r" type="logic">
-      <obj_property name="ElementShortName">wr_en_r</obj_property>
-      <obj_property name="ObjectShortName">wr_en_r</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/rd_en_r" type="logic">
-      <obj_property name="ElementShortName">rd_en_r</obj_property>
-      <obj_property name="ObjectShortName">rd_en_r</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/CLK_FRE" type="array">
-      <obj_property name="ElementShortName">CLK_FRE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CLK_FRE[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/BPS" type="array">
-      <obj_property name="ElementShortName">BPS[31:0]</obj_property>
-      <obj_property name="ObjectShortName">BPS[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/IDLE_CYCLE" type="array">
-      <obj_property name="ElementShortName">IDLE_CYCLE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">IDLE_CYCLE[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/TX_IDLE" type="array">
-      <obj_property name="ElementShortName">TX_IDLE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">TX_IDLE[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/TX_READ" type="array">
-      <obj_property name="ElementShortName">TX_READ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">TX_READ[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/uart_tb/uart/TX_WRITE" type="array">
-      <obj_property name="ElementShortName">TX_WRITE[31:0]</obj_property>
-      <obj_property name="ObjectShortName">TX_WRITE[31:0]</obj_property>
+   <wvobject fp_name="/ddr_write_tb/ddr_ctrtest/CMD_READ" type="array">
+      <obj_property name="ElementShortName">CMD_READ[2:0]</obj_property>
+      <obj_property name="ObjectShortName">CMD_READ[2:0]</obj_property>
    </wvobject>
 </wave_config>

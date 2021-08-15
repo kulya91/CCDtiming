@@ -26,12 +26,12 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir F:/workspace/xilinx/timingtest/ccd_timing_test.cache/wt [current_project]
 set_property parent.project_path F:/workspace/xilinx/timingtest/ccd_timing_test.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo f:/workspace/xilinx/timingtest/ccd_timing_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_ip -quiet f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xci
+read_ip -quiet F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xci
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_board.xdc]
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.xdc]
 set_property used_in_implementation false [get_files -all f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_ooc.xdc]
@@ -86,32 +86,32 @@ write_checkpoint -force -noxdef MMCM.dcp
 create_report "MMCM_synth_1_synth_report_utilization_0" "report_utilization -file MMCM_utilization_synth.rpt -pb MMCM_utilization_synth.pb"
 
 if { [catch {
-  file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM.dcp f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.dcp
+  file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM.dcp F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v
+  write_verilog -force -mode synth_stub F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl
+  write_vhdl -force -mode synth_stub F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
+  write_verilog -force -mode funcsim F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -121,32 +121,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM.dcp f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.dcp
+  file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM.dcp F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_stub.v f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v
+  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_stub.v F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_stub.vhdl f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl
+  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_stub.vhdl F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_sim_netlist.v f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
+  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_sim_netlist.v F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_sim_netlist.vhdl f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
+  file rename -force F:/workspace/xilinx/timingtest/ccd_timing_test.runs/MMCM_synth_1/MMCM_sim_netlist.vhdl F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -155,12 +155,12 @@ if { [catch {
 
 if {[file isdir F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM]} {
   catch { 
-    file copy -force f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM
+    file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.v F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM
   }
 }
 
 if {[file isdir F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM]} {
   catch { 
-    file copy -force f:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM
+    file copy -force F:/workspace/xilinx/timingtest/ccd_timing_test.srcs/sources_1/ip/MMCM/MMCM_stub.vhdl F:/workspace/xilinx/timingtest/ccd_timing_test.ip_user_files/ip/MMCM
   }
 }

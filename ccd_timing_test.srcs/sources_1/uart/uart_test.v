@@ -3,19 +3,16 @@ module uart_test(
     input                        rst_n,        //reset ,low active
 	input                        uart_rx,
 	output                       uart_tx,
-    output reg[47:0]             uart_reg,
-    output                       uart_ready
+    output [255:0]               uart_reg,              //uart reg 
+    output                       uart_ready,             //if update ready=1
+    input [127:0]                ddr_rd_data,
+    input                        ddr_read_ready
 );
 
-parameter                        CLK_FRE    =  50;//Mhz
-parameter                        BPS        =  115200;
-parameter                        IDLE_CYCLE =  2;
-
-reg[3:0]                         tx_state;
-reg[3:0]                         tx_next_state;
-localparam                       TX_IDLE =  0;
-localparam                       TX_READ =  1;   //send HELLO ALINX\r\n
-localparam                       TX_WRITE =  2;   //wait 1 second and send uart received data
+parameter                        CLK_FRE    =  50;              //Mhz
+parameter                        BPS        =  115200;          //uart bps
+parameter                        IDLE_CYCLE =  2;               //idle time
+localparam                       TX_DATA_LENGTH=128;
 /*******************************************************************/
 reg                              tx_data_valid;
 wire                             tx_data_ready;
@@ -27,11 +24,11 @@ wire                             rx_data_ready;
 wire                             rx_frame_idle;
 wire                             rx_bit_idle;
 wire[11:0]                       rx_frame_bit_num;
-wire[7:0]                         rx_data;
+wire[7:0]                        rx_data;
 reg[11:0]                        rx_shift_n;//接收移位计数
 /*******************************************************************/
 /*******************************************************************/
-wire [63:0]                     din;            // input wire [47 : 0] din
+wire [7:0]                     din;            // input wire [7 : 0] din
 wire                            wr_en;          // input wire wr_en
 wire                            rd_en;          // input wire rd_en
 wire [7:0]                      dout;           // output wire [47 : 0] dout
@@ -40,7 +37,7 @@ wire                            empty;          // output wire empty
 wire                            wr_ack;         // output wire wr_ack
 wire                            valid;          // output wire valid
 
-
+/*******************************************************************/
 assign rx_data_ready = 1'b1;
 assign uart_ready=rx_frame_idle;
 //移位寄存器计数
@@ -56,40 +53,89 @@ begin
       rx_shift_n<=1'd0;
     end
 end
-
+reg [255:0]uart_reg_r;
 //接收数据
 always@(posedge sys_clk or negedge rst_n)
 begin
     if(!rst_n)begin
-      uart_reg<=47'd0;
+      uart_reg_r<=255'd0;
     end
     else if(rx_data_valid==1&&rx_data_ready==1)begin
-      uart_reg<={uart_reg,rx_data};
+      uart_reg_r<={uart_reg_r,rx_data};
+    end
+    else if(rx_frame_idle)begin
+      uart_reg_r<=255'd0;
     end
 end
+assign uart_reg=(rx_frame_idle)?uart_reg_r:uart_reg;
+/*******************************************************************/
 //fifo write data
-reg [63:0]din_r;
+reg [7:0]din_r;
 reg wr_en_r;
+reg fifo_write_flag;
+reg [11:0] fifo_write_shift;
+reg[127:0] ddr_rd_data_r;
 always@(posedge sys_clk or negedge rst_n)
 begin
     if(!rst_n)begin
-      din_r<=63'd0;
+      fifo_write_flag<=1'd0;
+    end
+    else if(ddr_read_ready)begin
+      fifo_write_flag<=1'd1;
+    end
+    else if(fifo_write_shift>=15) begin
+    fifo_write_flag<=1'd0;
+    end
+end
+
+always@(posedge sys_clk or negedge rst_n)
+begin
+    if(!rst_n)begin
+      fifo_write_shift<=12'd0;
+    end
+    else if(fifo_write_flag)begin
+      fifo_write_shift<=fifo_write_shift+12'd1;
+    end
+    else begin
+      fifo_write_shift<=12'd0;
+    end
+end
+
+always@(posedge sys_clk or negedge rst_n)
+begin
+    if(!rst_n)begin
+      ddr_rd_data_r<=128'd0;
+    end
+    else if(ddr_read_ready)begin
+      ddr_rd_data_r<=ddr_rd_data;
+    end
+    else if(fifo_write_flag) begin
+    ddr_rd_data_r<=ddr_rd_data_r<<8;
+    end
+end
+
+always@(posedge sys_clk or negedge rst_n)
+begin
+    if(!rst_n)begin
+      din_r<=8'd0;
       wr_en_r<=1'd0;
     end
-    else if(rx_frame_idle)begin
-      din_r<={16'h0000,uart_reg};
+    else if(fifo_write_flag)begin
+      din_r<=ddr_rd_data_r[127:120];
       wr_en_r<=1'd1;
     end
     else begin
       wr_en_r<=1'd0;
     end
 end
-
 assign wr_en=wr_en_r;
 assign din=din_r;
-
-
-//发送状态机
+/***********************发送状态机********************************************/
+reg[3:0]                         tx_state;
+reg[3:0]                         tx_next_state;
+localparam                       TX_IDLE =  0;
+localparam                       TX_READ =  1;   //send HELLO ALINX\r\n
+localparam                       TX_WRITE =  2;   //wait 1 second and send uart received data
 always@(posedge sys_clk or negedge rst_n)
 begin
     if(!rst_n)begin
@@ -159,7 +205,7 @@ begin
       tx_data_valid <= 1'b0;
     end
 end
-
+/*******************************************************************/
 uart_rx#
 (
 	.CLK_FRE(CLK_FRE),
@@ -206,4 +252,5 @@ fifo_tx fifo_tx_inst (
     .empty                      (empty              ),          // output wire empty
     .valid                      (valid              )           // output wire valid
 );
+
 endmodule
